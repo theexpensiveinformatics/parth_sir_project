@@ -15,7 +15,7 @@ void main() async {
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV2dXZkamdyamx6bnlveHl2dXp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwNDk2OTgsImV4cCI6MjA3MDYyNTY5OH0.-2W1vezwHonospDcsIkdwge8e05DRDDAGtdmBEVfYic',
   );
 
-  // Set system UI overlay style
+
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
