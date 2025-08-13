@@ -1,0 +1,46 @@
+{
+  "build": {
+    "env": {
+      "FLUTTER_VERSION": "3.27.4",
+      "PUB_CACHE": "/tmp/.pub_cache",
+      "PATH": "/usr/local/bin:/usr/bin:/bin:/tmp/flutter/bin",
+      "FLUTTER_ROOT": "/tmp/flutter"
+    }
+  },
+  "buildCommand": "chmod +x install-flutter.sh && ./install-flutter.sh && flutter build web --release --web-renderer canvaskit",
+  "outputDirectory": "build/web",
+  "installCommand": "echo 'Flutter will be installed via build script'",
+  "framework": null,
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/canvaskit/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot))",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "functions": {
+    "build/web/**": {
+      "includeFiles": "build/web/**"
+    }
+  }
+}
