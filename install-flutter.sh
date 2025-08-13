@@ -40,3 +40,8 @@ flutter pub get
 
 echo "✅ Flutter 3.27.4 installation complete!"
 flutter --version
+
+echo "🏗️ Building Flutter web app..."
+flutter build web --release
+
+echo "✅ Build complete!"

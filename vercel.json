@@ -7,7 +7,7 @@
       "FLUTTER_ROOT": "/tmp/flutter"
     }
   },
-  "buildCommand": "chmod +x install-flutter.sh && ./install-flutter.sh && flutter build web --release --web-renderer canvaskit",
+  "buildCommand": "chmod +x install-flutter.sh && ./install-flutter.sh",
   "outputDirectory": "build/web",
   "installCommand": "echo 'Flutter will be installed via build script'",
   "framework": null,
